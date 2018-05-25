@@ -10,6 +10,7 @@ SRCS = main.c \
 		printing.c \
 		crossing.c \
 		clearing.c \
+		ants.c \
 
 LIB = -L libft/ -lft
 OBJ = $(SRCS:.c=.o)

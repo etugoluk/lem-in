@@ -70,10 +70,14 @@ set(SOURCE_FILES
         libft/get_next_line.c
         libft/libft.h
         algo.c
+        array_connect.c
+        clearing.c
         crossing.c
         finding_rooms.c
         lem_in.h
+        main.c
         printing.c
-        reader.c)
+        reading_connects.c
+        reading_rooms.c)
 
 add_executable(lem_in ${SOURCE_FILES})

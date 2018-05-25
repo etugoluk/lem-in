@@ -85,6 +85,12 @@
 		<Unit filename="/Users/etugoluk/Desktop/lem_in/algo.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/Users/etugoluk/Desktop/lem_in/array_connect.c">
+			<Option target="lem_in"/>
+		</Unit>
+		<Unit filename="/Users/etugoluk/Desktop/lem_in/clearing.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/Users/etugoluk/Desktop/lem_in/crossing.c">
 			<Option target="lem_in"/>
 		</Unit>
@@ -289,10 +295,16 @@
 		<Unit filename="/Users/etugoluk/Desktop/lem_in/libft/libft.h">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/Users/etugoluk/Desktop/lem_in/main.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/Users/etugoluk/Desktop/lem_in/printing.c">
 			<Option target="lem_in"/>
 		</Unit>
-		<Unit filename="/Users/etugoluk/Desktop/lem_in/reader.c">
+		<Unit filename="/Users/etugoluk/Desktop/lem_in/reading_connects.c">
+			<Option target="lem_in"/>
+		</Unit>
+		<Unit filename="/Users/etugoluk/Desktop/lem_in/reading_rooms.c">
 			<Option target="lem_in"/>
 		</Unit>
 		<Unit filename="/Users/etugoluk/Desktop/lem_in/CMakeLists.txt">

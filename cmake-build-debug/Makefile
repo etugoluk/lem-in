@@ -150,6 +150,60 @@ algo.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/algo.c.s
 .PHONY : algo.c.s
 
+array_connect.o: array_connect.c.o
+
+.PHONY : array_connect.o
+
+# target to build an object file
+array_connect.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/array_connect.c.o
+.PHONY : array_connect.c.o
+
+array_connect.i: array_connect.c.i
+
+.PHONY : array_connect.i
+
+# target to preprocess a source file
+array_connect.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/array_connect.c.i
+.PHONY : array_connect.c.i
+
+array_connect.s: array_connect.c.s
+
+.PHONY : array_connect.s
+
+# target to generate assembly for a file
+array_connect.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/array_connect.c.s
+.PHONY : array_connect.c.s
+
+clearing.o: clearing.c.o
+
+.PHONY : clearing.o
+
+# target to build an object file
+clearing.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/clearing.c.o
+.PHONY : clearing.c.o
+
+clearing.i: clearing.c.i
+
+.PHONY : clearing.i
+
+# target to preprocess a source file
+clearing.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/clearing.c.i
+.PHONY : clearing.c.i
+
+clearing.s: clearing.c.s
+
+.PHONY : clearing.s
+
+# target to generate assembly for a file
+clearing.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/clearing.c.s
+.PHONY : clearing.c.s
+
 crossing.o: crossing.c.o
 
 .PHONY : crossing.o
@@ -1932,6 +1986,33 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.s
+.PHONY : main.c.s
+
 printing.o: printing.c.o
 
 .PHONY : printing.o
@@ -1959,32 +2040,59 @@ printing.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/printing.c.s
 .PHONY : printing.c.s
 
-reader.o: reader.c.o
+reading_connects.o: reading_connects.c.o
 
-.PHONY : reader.o
+.PHONY : reading_connects.o
 
 # target to build an object file
-reader.c.o:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reader.c.o
-.PHONY : reader.c.o
+reading_connects.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_connects.c.o
+.PHONY : reading_connects.c.o
 
-reader.i: reader.c.i
+reading_connects.i: reading_connects.c.i
 
-.PHONY : reader.i
+.PHONY : reading_connects.i
 
 # target to preprocess a source file
-reader.c.i:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reader.c.i
-.PHONY : reader.c.i
+reading_connects.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_connects.c.i
+.PHONY : reading_connects.c.i
 
-reader.s: reader.c.s
+reading_connects.s: reading_connects.c.s
 
-.PHONY : reader.s
+.PHONY : reading_connects.s
 
 # target to generate assembly for a file
-reader.c.s:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reader.c.s
-.PHONY : reader.c.s
+reading_connects.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_connects.c.s
+.PHONY : reading_connects.c.s
+
+reading_rooms.o: reading_rooms.c.o
+
+.PHONY : reading_rooms.o
+
+# target to build an object file
+reading_rooms.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_rooms.c.o
+.PHONY : reading_rooms.c.o
+
+reading_rooms.i: reading_rooms.c.i
+
+.PHONY : reading_rooms.i
+
+# target to preprocess a source file
+reading_rooms.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_rooms.c.i
+.PHONY : reading_rooms.c.i
+
+reading_rooms.s: reading_rooms.c.s
+
+.PHONY : reading_rooms.s
+
+# target to generate assembly for a file
+reading_rooms.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_rooms.c.s
+.PHONY : reading_rooms.c.s
 
 # Help Target
 help:
@@ -1998,6 +2106,12 @@ help:
 	@echo "... algo.o"
 	@echo "... algo.i"
 	@echo "... algo.s"
+	@echo "... array_connect.o"
+	@echo "... array_connect.i"
+	@echo "... array_connect.s"
+	@echo "... clearing.o"
+	@echo "... clearing.i"
+	@echo "... clearing.s"
 	@echo "... crossing.o"
 	@echo "... crossing.i"
 	@echo "... crossing.s"
@@ -2196,12 +2310,18 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... printing.o"
 	@echo "... printing.i"
 	@echo "... printing.s"
-	@echo "... reader.o"
-	@echo "... reader.i"
-	@echo "... reader.s"
+	@echo "... reading_connects.o"
+	@echo "... reading_connects.i"
+	@echo "... reading_connects.s"
+	@echo "... reading_rooms.o"
+	@echo "... reading_rooms.i"
+	@echo "... reading_rooms.s"
 .PHONY : help
 
 

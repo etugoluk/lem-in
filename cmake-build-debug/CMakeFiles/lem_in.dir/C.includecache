@@ -12,6 +12,14 @@ lem_in.h
 stdio.h
 -
 
+/Users/etugoluk/Desktop/lem_in/array_connect.c
+lem_in.h
+/Users/etugoluk/Desktop/lem_in/lem_in.h
+
+/Users/etugoluk/Desktop/lem_in/clearing.c
+lem_in.h
+/Users/etugoluk/Desktop/lem_in/lem_in.h
+
 /Users/etugoluk/Desktop/lem_in/crossing.c
 lem_in.h
 /Users/etugoluk/Desktop/lem_in/lem_in.h
@@ -31,6 +39,8 @@ fcntl.h
 -
 libft/libft.h
 /Users/etugoluk/Desktop/lem_in/libft/libft.h
+stdio.h
+-
 
 /Users/etugoluk/Desktop/lem_in/libft/ft_atoi.c
 
@@ -284,15 +294,19 @@ string.h
 stdlib.h
 -
 
+/Users/etugoluk/Desktop/lem_in/main.c
+lem_in.h
+/Users/etugoluk/Desktop/lem_in/lem_in.h
+
 /Users/etugoluk/Desktop/lem_in/printing.c
 lem_in.h
 /Users/etugoluk/Desktop/lem_in/lem_in.h
-stdio.h
--
 
-/Users/etugoluk/Desktop/lem_in/reader.c
+/Users/etugoluk/Desktop/lem_in/reading_connects.c
 lem_in.h
 /Users/etugoluk/Desktop/lem_in/lem_in.h
-stdio.h
--
+
+/Users/etugoluk/Desktop/lem_in/reading_rooms.c
+lem_in.h
+/Users/etugoluk/Desktop/lem_in/lem_in.h
 

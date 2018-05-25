@@ -5,6 +5,14 @@ CMakeFiles/lem_in.dir/algo.c.o: ../algo.c
 CMakeFiles/lem_in.dir/algo.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/algo.c.o: ../libft/libft.h
 
+CMakeFiles/lem_in.dir/array_connect.c.o: ../array_connect.c
+CMakeFiles/lem_in.dir/array_connect.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/array_connect.c.o: ../libft/libft.h
+
+CMakeFiles/lem_in.dir/clearing.c.o: ../clearing.c
+CMakeFiles/lem_in.dir/clearing.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/clearing.c.o: ../libft/libft.h
+
 CMakeFiles/lem_in.dir/crossing.c.o: ../crossing.c
 CMakeFiles/lem_in.dir/crossing.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/crossing.c.o: ../libft/libft.h
@@ -199,11 +207,19 @@ CMakeFiles/lem_in.dir/libft/ft_toupper.c.o: ../libft/libft.h
 CMakeFiles/lem_in.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 CMakeFiles/lem_in.dir/libft/get_next_line.c.o: ../libft/libft.h
 
+CMakeFiles/lem_in.dir/main.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/main.c.o: ../libft/libft.h
+CMakeFiles/lem_in.dir/main.c.o: ../main.c
+
 CMakeFiles/lem_in.dir/printing.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/printing.c.o: ../libft/libft.h
 CMakeFiles/lem_in.dir/printing.c.o: ../printing.c
 
-CMakeFiles/lem_in.dir/reader.c.o: ../lem_in.h
-CMakeFiles/lem_in.dir/reader.c.o: ../libft/libft.h
-CMakeFiles/lem_in.dir/reader.c.o: ../reader.c
+CMakeFiles/lem_in.dir/reading_connects.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/reading_connects.c.o: ../libft/libft.h
+CMakeFiles/lem_in.dir/reading_connects.c.o: ../reading_connects.c
+
+CMakeFiles/lem_in.dir/reading_rooms.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/reading_rooms.c.o: ../libft/libft.h
+CMakeFiles/lem_in.dir/reading_rooms.c.o: ../reading_rooms.c
 

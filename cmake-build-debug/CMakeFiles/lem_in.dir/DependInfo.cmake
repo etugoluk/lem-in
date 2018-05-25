@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/etugoluk/Desktop/lem_in/algo.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/algo.c.o"
+  "/Users/etugoluk/Desktop/lem_in/array_connect.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/array_connect.c.o"
+  "/Users/etugoluk/Desktop/lem_in/clearing.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/clearing.c.o"
   "/Users/etugoluk/Desktop/lem_in/crossing.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/crossing.c.o"
   "/Users/etugoluk/Desktop/lem_in/finding_rooms.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/finding_rooms.c.o"
   "/Users/etugoluk/Desktop/lem_in/libft/ft_atoi.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_atoi.c.o"
@@ -71,8 +73,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/etugoluk/Desktop/lem_in/libft/ft_tolower.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_tolower.c.o"
   "/Users/etugoluk/Desktop/lem_in/libft/ft_toupper.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_toupper.c.o"
   "/Users/etugoluk/Desktop/lem_in/libft/get_next_line.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/get_next_line.c.o"
+  "/Users/etugoluk/Desktop/lem_in/main.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o"
   "/Users/etugoluk/Desktop/lem_in/printing.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/printing.c.o"
-  "/Users/etugoluk/Desktop/lem_in/reader.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/reader.c.o"
+  "/Users/etugoluk/Desktop/lem_in/reading_connects.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/reading_connects.c.o"
+  "/Users/etugoluk/Desktop/lem_in/reading_rooms.c" "/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/reading_rooms.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

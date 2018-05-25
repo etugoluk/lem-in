@@ -36,30 +36,25 @@ int		check(char *s, t_room *t)
 
 int	length_connect(t_connect *t)
 {
-	t_connect *tmp;
 	int	n;
 
 	n = 0;
-	tmp = t;
-	if (!tmp)
+	if (!t)
 		return (n);
-	while (tmp)
+	while (t)
 	{
 		n++;
-		tmp = tmp->next;
+		t = t->next;
 	}
 	return (n - 1);
 }
 
 void	length_arr_connect(t_connect_arr *arr)
 {
-	t_connect_arr *tmp;
-
-	tmp = arr;
-	while (tmp)
+	while (arr)
 	{
-		tmp->length = length_connect(tmp->s);
-		tmp = tmp->next;
+		arr->length = length_connect(arr->s);
+		arr = arr->next;
 	}
 }
 
@@ -95,30 +90,24 @@ void	printing_connect(t_lem_in t)
 	}
 }
 
-void	print_connect(t_connect *t)
+void	print_connect(t_connect *c)
 {
-	t_connect *tmp;
-
-	tmp = t;
-	if (!tmp)
+	if (!c)
 		printf("%s\n", "no path");
-	while (tmp)
+	while (c)
 	{
-		printf("%s\n", tmp->r);
-		tmp = tmp->next;
+		printf("%s\n", c->r);
+		c = c->next;
 	}
 }
 
 void	print_arr_connect(t_connect_arr *arr)
 {
-	t_connect_arr *tmp;
-
-	tmp = arr;
-	while (tmp)
+	while (arr)
 	{
-		print_connect(tmp->s);
-		printf("length %d\n", tmp->length);
-		tmp = tmp->next;
+		print_connect(arr->s);
+		printf("length %d\n", arr->length);
+		arr = arr->next;
 		printf("\n");
 	}	
 }

@@ -1617,9 +1617,57 @@ CMakeFiles/lem_in.dir/algo.c.o.provides: CMakeFiles/lem_in.dir/algo.c.o.requires
 CMakeFiles/lem_in.dir/algo.c.o.provides.build: CMakeFiles/lem_in.dir/algo.c.o
 
 
+CMakeFiles/lem_in.dir/array_connect.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/array_connect.c.o: ../array_connect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/lem_in.dir/array_connect.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/array_connect.c.o   -c /Users/etugoluk/Desktop/lem_in/array_connect.c
+
+CMakeFiles/lem_in.dir/array_connect.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/array_connect.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/etugoluk/Desktop/lem_in/array_connect.c > CMakeFiles/lem_in.dir/array_connect.c.i
+
+CMakeFiles/lem_in.dir/array_connect.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/array_connect.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/etugoluk/Desktop/lem_in/array_connect.c -o CMakeFiles/lem_in.dir/array_connect.c.s
+
+CMakeFiles/lem_in.dir/array_connect.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/array_connect.c.o.requires
+
+CMakeFiles/lem_in.dir/array_connect.c.o.provides: CMakeFiles/lem_in.dir/array_connect.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/array_connect.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/array_connect.c.o.provides
+
+CMakeFiles/lem_in.dir/array_connect.c.o.provides.build: CMakeFiles/lem_in.dir/array_connect.c.o
+
+
+CMakeFiles/lem_in.dir/clearing.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/clearing.c.o: ../clearing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/lem_in.dir/clearing.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/clearing.c.o   -c /Users/etugoluk/Desktop/lem_in/clearing.c
+
+CMakeFiles/lem_in.dir/clearing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/clearing.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/etugoluk/Desktop/lem_in/clearing.c > CMakeFiles/lem_in.dir/clearing.c.i
+
+CMakeFiles/lem_in.dir/clearing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/clearing.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/etugoluk/Desktop/lem_in/clearing.c -o CMakeFiles/lem_in.dir/clearing.c.s
+
+CMakeFiles/lem_in.dir/clearing.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/clearing.c.o.requires
+
+CMakeFiles/lem_in.dir/clearing.c.o.provides: CMakeFiles/lem_in.dir/clearing.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/clearing.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/clearing.c.o.provides
+
+CMakeFiles/lem_in.dir/clearing.c.o.provides.build: CMakeFiles/lem_in.dir/clearing.c.o
+
+
 CMakeFiles/lem_in.dir/crossing.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/crossing.c.o: ../crossing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/lem_in.dir/crossing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem_in.dir/crossing.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/crossing.c.o   -c /Users/etugoluk/Desktop/lem_in/crossing.c
 
 CMakeFiles/lem_in.dir/crossing.c.i: cmake_force
@@ -1643,7 +1691,7 @@ CMakeFiles/lem_in.dir/crossing.c.o.provides.build: CMakeFiles/lem_in.dir/crossin
 
 CMakeFiles/lem_in.dir/finding_rooms.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/finding_rooms.c.o: ../finding_rooms.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/lem_in.dir/finding_rooms.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/lem_in.dir/finding_rooms.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/finding_rooms.c.o   -c /Users/etugoluk/Desktop/lem_in/finding_rooms.c
 
 CMakeFiles/lem_in.dir/finding_rooms.c.i: cmake_force
@@ -1665,9 +1713,33 @@ CMakeFiles/lem_in.dir/finding_rooms.c.o.provides: CMakeFiles/lem_in.dir/finding_
 CMakeFiles/lem_in.dir/finding_rooms.c.o.provides.build: CMakeFiles/lem_in.dir/finding_rooms.c.o
 
 
+CMakeFiles/lem_in.dir/main.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem_in.dir/main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/main.c.o   -c /Users/etugoluk/Desktop/lem_in/main.c
+
+CMakeFiles/lem_in.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/main.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/etugoluk/Desktop/lem_in/main.c > CMakeFiles/lem_in.dir/main.c.i
+
+CMakeFiles/lem_in.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/main.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/etugoluk/Desktop/lem_in/main.c -o CMakeFiles/lem_in.dir/main.c.s
+
+CMakeFiles/lem_in.dir/main.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/main.c.o.requires
+
+CMakeFiles/lem_in.dir/main.c.o.provides: CMakeFiles/lem_in.dir/main.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/main.c.o.provides
+
+CMakeFiles/lem_in.dir/main.c.o.provides.build: CMakeFiles/lem_in.dir/main.c.o
+
+
 CMakeFiles/lem_in.dir/printing.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/printing.c.o: ../printing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/lem_in.dir/printing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/lem_in.dir/printing.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/printing.c.o   -c /Users/etugoluk/Desktop/lem_in/printing.c
 
 CMakeFiles/lem_in.dir/printing.c.i: cmake_force
@@ -1689,28 +1761,52 @@ CMakeFiles/lem_in.dir/printing.c.o.provides: CMakeFiles/lem_in.dir/printing.c.o.
 CMakeFiles/lem_in.dir/printing.c.o.provides.build: CMakeFiles/lem_in.dir/printing.c.o
 
 
-CMakeFiles/lem_in.dir/reader.c.o: CMakeFiles/lem_in.dir/flags.make
-CMakeFiles/lem_in.dir/reader.c.o: ../reader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/lem_in.dir/reader.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/reader.c.o   -c /Users/etugoluk/Desktop/lem_in/reader.c
+CMakeFiles/lem_in.dir/reading_connects.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/reading_connects.c.o: ../reading_connects.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/lem_in.dir/reading_connects.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/reading_connects.c.o   -c /Users/etugoluk/Desktop/lem_in/reading_connects.c
 
-CMakeFiles/lem_in.dir/reader.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/reader.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/etugoluk/Desktop/lem_in/reader.c > CMakeFiles/lem_in.dir/reader.c.i
+CMakeFiles/lem_in.dir/reading_connects.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/reading_connects.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/etugoluk/Desktop/lem_in/reading_connects.c > CMakeFiles/lem_in.dir/reading_connects.c.i
 
-CMakeFiles/lem_in.dir/reader.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/reader.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/etugoluk/Desktop/lem_in/reader.c -o CMakeFiles/lem_in.dir/reader.c.s
+CMakeFiles/lem_in.dir/reading_connects.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/reading_connects.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/etugoluk/Desktop/lem_in/reading_connects.c -o CMakeFiles/lem_in.dir/reading_connects.c.s
 
-CMakeFiles/lem_in.dir/reader.c.o.requires:
+CMakeFiles/lem_in.dir/reading_connects.c.o.requires:
 
-.PHONY : CMakeFiles/lem_in.dir/reader.c.o.requires
+.PHONY : CMakeFiles/lem_in.dir/reading_connects.c.o.requires
 
-CMakeFiles/lem_in.dir/reader.c.o.provides: CMakeFiles/lem_in.dir/reader.c.o.requires
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reader.c.o.provides.build
-.PHONY : CMakeFiles/lem_in.dir/reader.c.o.provides
+CMakeFiles/lem_in.dir/reading_connects.c.o.provides: CMakeFiles/lem_in.dir/reading_connects.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_connects.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/reading_connects.c.o.provides
 
-CMakeFiles/lem_in.dir/reader.c.o.provides.build: CMakeFiles/lem_in.dir/reader.c.o
+CMakeFiles/lem_in.dir/reading_connects.c.o.provides.build: CMakeFiles/lem_in.dir/reading_connects.c.o
+
+
+CMakeFiles/lem_in.dir/reading_rooms.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/reading_rooms.c.o: ../reading_rooms.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/lem_in.dir/reading_rooms.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/reading_rooms.c.o   -c /Users/etugoluk/Desktop/lem_in/reading_rooms.c
+
+CMakeFiles/lem_in.dir/reading_rooms.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/reading_rooms.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/etugoluk/Desktop/lem_in/reading_rooms.c > CMakeFiles/lem_in.dir/reading_rooms.c.i
+
+CMakeFiles/lem_in.dir/reading_rooms.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/reading_rooms.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/etugoluk/Desktop/lem_in/reading_rooms.c -o CMakeFiles/lem_in.dir/reading_rooms.c.s
+
+CMakeFiles/lem_in.dir/reading_rooms.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/reading_rooms.c.o.requires
+
+CMakeFiles/lem_in.dir/reading_rooms.c.o.provides: CMakeFiles/lem_in.dir/reading_rooms.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/reading_rooms.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/reading_rooms.c.o.provides
+
+CMakeFiles/lem_in.dir/reading_rooms.c.o.provides.build: CMakeFiles/lem_in.dir/reading_rooms.c.o
 
 
 # Object files for target lem_in
@@ -1780,10 +1876,14 @@ lem_in_OBJECTS = \
 "CMakeFiles/lem_in.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/lem_in.dir/libft/get_next_line.c.o" \
 "CMakeFiles/lem_in.dir/algo.c.o" \
+"CMakeFiles/lem_in.dir/array_connect.c.o" \
+"CMakeFiles/lem_in.dir/clearing.c.o" \
 "CMakeFiles/lem_in.dir/crossing.c.o" \
 "CMakeFiles/lem_in.dir/finding_rooms.c.o" \
+"CMakeFiles/lem_in.dir/main.c.o" \
 "CMakeFiles/lem_in.dir/printing.c.o" \
-"CMakeFiles/lem_in.dir/reader.c.o"
+"CMakeFiles/lem_in.dir/reading_connects.c.o" \
+"CMakeFiles/lem_in.dir/reading_rooms.c.o"
 
 # External object files for target lem_in
 lem_in_EXTERNAL_OBJECTS =
@@ -1853,13 +1953,17 @@ lem_in: CMakeFiles/lem_in.dir/libft/ft_tolower.c.o
 lem_in: CMakeFiles/lem_in.dir/libft/ft_toupper.c.o
 lem_in: CMakeFiles/lem_in.dir/libft/get_next_line.c.o
 lem_in: CMakeFiles/lem_in.dir/algo.c.o
+lem_in: CMakeFiles/lem_in.dir/array_connect.c.o
+lem_in: CMakeFiles/lem_in.dir/clearing.c.o
 lem_in: CMakeFiles/lem_in.dir/crossing.c.o
 lem_in: CMakeFiles/lem_in.dir/finding_rooms.c.o
+lem_in: CMakeFiles/lem_in.dir/main.c.o
 lem_in: CMakeFiles/lem_in.dir/printing.c.o
-lem_in: CMakeFiles/lem_in.dir/reader.c.o
+lem_in: CMakeFiles/lem_in.dir/reading_connects.c.o
+lem_in: CMakeFiles/lem_in.dir/reading_rooms.c.o
 lem_in: CMakeFiles/lem_in.dir/build.make
 lem_in: CMakeFiles/lem_in.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking C executable lem_in"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/etugoluk/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking C executable lem_in"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem_in.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1932,10 +2036,14 @@ CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/libft/ft_tolower.c.o.requi
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/libft/ft_toupper.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/libft/get_next_line.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/algo.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/array_connect.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/clearing.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/crossing.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/finding_rooms.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/main.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/printing.c.o.requires
-CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/reader.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/reading_connects.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/reading_rooms.c.o.requires
 
 .PHONY : CMakeFiles/lem_in.dir/requires
 

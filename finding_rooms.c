@@ -1,19 +1,5 @@
 #include "lem_in.h"
 
-char	*find_start_room(t_lem_in 	t)
-{
-	t_room *r;
-
-	r = t.rooms;
-	while (r)
-	{
-		if (r->start)
-			return (r->name);
-		r = r->next;
-	}
-	return (NULL);
-}
-
 int	find_start_num_room(t_lem_in 	t)
 {
 	t_room *r;
@@ -26,20 +12,6 @@ int	find_start_num_room(t_lem_in 	t)
 		r = r->next;
 	}
 	return (-1);
-}
-
-char	*find_finish_room(t_lem_in 	t)
-{
-	t_room *r;
-
-	r = t.rooms;
-	while (r)
-	{
-		if (r->finish)
-			return (r->name);
-		r = r->next;
-	}
-	return (NULL);
 }
 
 int	find_finish_num_room(t_lem_in 	t)

@@ -11,20 +11,14 @@ char		**connect_array(int numb_rooms)
 	t = (char **)malloc(sizeof(char *) * (numb_rooms + 1));
 	t[numb_rooms] = 0;
 	while (i < numb_rooms)
-	{
-		t[i] = ft_strnew(numb_rooms);
-		i++;
-	}
+		t[i++] = ft_strnew(numb_rooms);
 	i = 0;
 	while (i < numb_rooms)
 	{
 		j = 0;
 		while (j < numb_rooms)
-		{
-			t[i][j] = '0';
-			j++;
-		}
-		//t.con[i][j] = '\0';
+			t[i][j++] = '0';
+		t[i][j] = '\0';
 		i++;
 	}
 	return (t);
@@ -32,8 +26,8 @@ char		**connect_array(int numb_rooms)
 
 t_coord		find_coord(char *line, t_lem_in t)
 {
-	t_coord c;
-	int size;
+	t_coord	c;
+	int		size;
 
 	size = 0;
 	c.x = -1;
@@ -97,10 +91,12 @@ char	**symmetry(char **s)
 	return (s);
 }
 
-int	fill_connect_array(int fd, t_lem_in *t, char *line)
+int	fill_connect_array(int fd, t_lem_in *t, char *line, t_list **lst)
 {
 	t_coord cord;
 
+	(*lst)->next = ft_lstnew(line, ft_strlen(line));
+	*lst = (*lst)->next;
 	if (ft_strchr(line, '-'))
 	{
 		cord = find_coord(line, *t);
@@ -113,11 +109,17 @@ int	fill_connect_array(int fd, t_lem_in *t, char *line)
 	while (get_next_line(fd, &line) == 1 && (ft_strchr(line, '-') || line[0] == '#'))
 	{
 		if (line[0] == '#')
+		{
+			free(line);
 			continue;
+		}
+		(*lst)->next = ft_lstnew(line, ft_strlen(line));
+		*lst = (*lst)->next;
 		cord = find_coord(line, *t);
 		if (cord.x == -1 || cord.y == -1)
 			return (0);
 		(*t).con[cord.x][cord.y] = '1';
+		free(line);
 	}
 	(*t).con = symmetry((*t).con);
 	return (1);

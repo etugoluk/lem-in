@@ -25,8 +25,49 @@ void	free_rooms(t_room *r)
 	}
 }
 
-void free_struct(t_lem_in *t)
+void	free_connect(t_connect *c)
 {
-	free_arr(t->con);
-	free_rooms(t->rooms);
+	t_connect *tmp = c;
+	while (c)
+	{
+		tmp = c;
+		c = c->next;
+		free(tmp->r);
+		free(tmp);
+	}
+}
+
+void	free_lst(t_list *c)
+{
+	t_list *tmp = c;
+	while (c)
+	{
+		tmp = c;
+		c = c->next;
+		free_connect(tmp->content);
+		free(tmp);
+	}	
+}
+
+void	free_arr_connect(t_connect_arr *c)
+{
+	t_connect_arr *tmp = c;
+	while (c)
+	{
+		tmp = c;
+		c = c->next;
+		free_connect(tmp->s);
+		free(tmp);
+	}
+}
+
+void	free_ants(t_ant *c)
+{
+	t_ant *tmp = c;
+	while (c)
+	{
+		tmp = c;
+		c = c->next;
+		free(tmp);
+	}
 }
