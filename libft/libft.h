@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <stdarg.h>
+# include <wchar.h>
 
 # define BUFF_SIZE 1
 
@@ -32,6 +34,19 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_printf
+{
+	char			plus;
+	char			minus;
+	char			space;
+	char			sharp;
+	char			zero;
+	int				width;
+	int				pr;
+	char			length;
+	char			c;
+}					t_printf;
 
 void				*ft_memset(void *ptr, int value, size_t num);
 void				ft_bzero(void *s, size_t n);
@@ -92,11 +107,42 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_free_lst(t_list *lst);
 int					ft_maximum(int a, int b);
 int					ft_minimum(int a, int b);
 int					ft_sqrt(int nb);
 void				ft_print_intarray(int **arr, int a, int b);
 void				ft_print_array(char **arr);
 int					get_next_line(const int fd, char **line);
+
+int					ft_printf(const char *s, ...);
+t_printf			fill_struct(const char **s, va_list *l);
+int					write_struct(t_printf f, va_list *l);
+void				zero_struct(t_printf *f);
+void				f_flags(t_printf *f, char c);
+void				f_length(const char **s, char *length);
+void				f_width(const char **s, va_list *l, t_printf *f);
+void				f_pr(const char **s, va_list *l, t_printf *f);
+int					print_di(va_list *l, t_printf f);
+int					print_s(va_list *l, t_printf f);
+int					print_ls(va_list *l, t_printf f);
+int					print_c(va_list *l, t_printf f);
+int					print_lc(va_list *l, t_printf f);
+int					print_o(va_list *l, t_printf f);
+int					print_u(va_list *l, t_printf f);
+int					print_px(va_list *l, t_printf f);
+int					print_procent(t_printf f, char c);
+int					bits(wchar_t chr);
+void				to_unicode(wchar_t chr);
+int					dig_p(intmax_t n, int k);
+int					digitsu(uintmax_t n);
+int					ft_putstr_p(char const *s);
+int					ft_putstrn(char const *s, int n);
+void				ft_putnbr_p(intmax_t n);
+void				ft_putnbr1(uintmax_t n);
+char				*itoa_base(uintmax_t n, int base, int k);
+size_t				len(const char *s);
+int					padding(int r, t_printf f);
+int					presicions(int n);
 
 #endif

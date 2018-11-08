@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_free_lst.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etugoluk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/30 15:20:21 by etugoluk          #+#    #+#             */
-/*   Updated: 2017/10/30 15:20:22 by etugoluk         ###   ########.fr       */
+/*   Created: 2018/05/26 14:48:16 by etugoluk          #+#    #+#             */
+/*   Updated: 2018/05/26 14:48:18 by etugoluk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_lstnew(void const *content, size_t content_size)
+void				ft_free_lst(t_list *lst)
 {
-	t_list		*list;
+	t_list			*tmp;
 
-	list = (t_list *)malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	if (!content)
+	while (lst)
 	{
-		free(list);
-		return (NULL);
+		tmp = lst;
+		lst = lst->next;
+		free(tmp->content);
+		free(tmp);
 	}
-	else
-	{
-		list->content = malloc(content_size);
-		if (!list->content)
-		{
-			free(list);
-			return (NULL);
-		}
-		ft_memcpy((list->content), content, content_size);
-		list->content_size = content_size;
-	}
-	list->next = NULL;
-	return (list);
 }

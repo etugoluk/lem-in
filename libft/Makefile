@@ -70,12 +70,24 @@ SRCS = ft_memset.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_free_lst.c \
 		ft_maximum.c \
 		ft_minimum.c \
 		ft_sqrt.c \
 		ft_print_array.c \
 		ft_print_intarray.c \
 		get_next_line.c \
+		main.c \
+		struct.c \
+		ft_put.c \
+		itoa_base.c \
+		unicode.c \
+		print.c \
+		count_digits.c \
+		print_cs.c \
+		print_ou.c \
+		print_di.c \
+		print_px.c \
 
 BINS = $(SRCS:.c=.o)
 

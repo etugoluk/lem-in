@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printing.c                                         :+:      :+:    :+:   */
+/*   count_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etugoluk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/25 11:45:06 by etugoluk          #+#    #+#             */
-/*   Updated: 2018/05/25 11:45:07 by etugoluk         ###   ########.fr       */
+/*   Created: 2018/02/24 13:42:54 by etugoluk          #+#    #+#             */
+/*   Updated: 2018/02/24 13:42:54 by etugoluk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "libft.h"
 
-int				digits(int n)
+int						dig_p(intmax_t n, int k)
 {
-	int			size;
-	int			i;
+	int					size;
+	intmax_t			i;
 
 	size = 1;
 	i = 1;
-	if (n < 0)
+	if (n / 10 == -922337203685477580 && n % 10 == -8 && k == 0)
+		return (20);
+	else if (n / 10 == -922337203685477580 && n % 10 == -8 && k == 1)
+		return (19);
+	if (n < 0 && k == 0)
 	{
 		size++;
 		n = -n;
 	}
+	else if (n < 0)
+		n = -n;
 	if (n == 0)
 		return (1);
 	while (n / i > 0)
@@ -35,37 +41,22 @@ int				digits(int n)
 	return (size);
 }
 
-int				check(char *s, t_room *t)
+int						digitsu(uintmax_t n)
 {
-	while (t)
-	{
-		if (!ft_strcmp(s, t->name))
-			return (1);
-		t = t->next;
-	}
-	return (0);
-}
+	int					size;
+	uintmax_t			i;
 
-int				length_connect(t_con *t)
-{
-	int			n;
-
-	n = 0;
-	if (!t)
-		return (n);
-	while (t)
+	size = 1;
+	i = 1;
+	if (n / 10 >= 1000000000000000000)
+		return (20);
+	if (n == 0)
+		return (1);
+	while (n / i > 0)
 	{
-		n++;
-		t = t->next;
+		size++;
+		i *= 10;
 	}
-	return (n - 1);
-}
-
-void			length_arr_connect(t_con_arr *arr)
-{
-	while (arr)
-	{
-		arr->length = length_connect(arr->s);
-		arr = arr->next;
-	}
+	size--;
+	return (size);
 }

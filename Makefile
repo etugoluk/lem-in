@@ -7,10 +7,11 @@ SRCS = main.c \
 		array_connect.c \
 		algo.c \
 		finding_rooms.c \
+		compring.c \
 		printing.c \
 		crossing.c \
+		creating.c \
 		clearing.c \
-		ants.c \
 
 LIB = -L libft/ -lft
 OBJ = $(SRCS:.c=.o)

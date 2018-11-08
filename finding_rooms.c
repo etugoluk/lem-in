@@ -1,36 +1,66 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   finding_rooms.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: etugoluk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/25 11:44:43 by etugoluk          #+#    #+#             */
+/*   Updated: 2018/05/25 11:44:44 by etugoluk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
-int	find_start_num_room(t_lem_in 	t)
+int			snroom(t_lem_in t)
 {
-	t_room *r;
+	t_room	*r;
+	int		res;
+	int		i;
 
-	r = t.rooms;
+	i = 0;
+	res = -1;
+	r = NULL;
+	if (t.rooms)
+		r = t.rooms;
 	while (r)
 	{
 		if (r->start)
-			return (r->number);
+		{
+			res = r->number;
+			i++;
+		}
 		r = r->next;
 	}
-	return (-1);
+	return ((i == 1) ? res : -1);
 }
 
-int	find_finish_num_room(t_lem_in 	t)
+int			fnroom(t_lem_in t)
 {
-	t_room *r;
+	t_room	*r;
+	int		res;
+	int		i;
 
-	r = t.rooms;
+	i = 0;
+	res = -1;
+	r = NULL;
+	if (t.rooms)
+		r = t.rooms;
 	while (r)
 	{
 		if (r->finish)
-			return (r->number);
+		{
+			res = r->number;
+			i++;
+		}
 		r = r->next;
 	}
-	return (-1);
+	return ((i == 1) ? res : -1);
 }
 
-int		find_number_room(char *s, t_room *t)
+int			find_number_room(char *s, t_room *t)
 {
-	int n;
+	int		n;
 
 	n = 0;
 	while (t)
@@ -38,7 +68,7 @@ int		find_number_room(char *s, t_room *t)
 		if (!ft_strcmp(t->name, s))
 		{
 			n = t->number;
-			break;
+			break ;
 		}
 		else
 			t = t->next;
@@ -46,10 +76,9 @@ int		find_number_room(char *s, t_room *t)
 	return (n);
 }
 
-char	*find_name_room(int n, t_room *tmp)
+char		*find_name_room(int n, t_room *t)
 {
-	char *name;
-    t_room *t = tmp;
+	char	*name;
 
 	name = NULL;
 	while (t)
@@ -57,7 +86,7 @@ char	*find_name_room(int n, t_room *tmp)
 		if (t->number == n)
 		{
 			name = t->name;
-			break;
+			break ;
 		}
 		else
 			t = t->next;
@@ -65,34 +94,14 @@ char	*find_name_room(int n, t_room *tmp)
 	return (name);
 }
 
-t_room  *find_number(t_room *tmp, int n)
+t_room		*find_number(t_room *t, int n)
 {
-    t_room *t = tmp;
-
-    while (t)
-    {
-        if (t->number == n)
-        {
-            break;
-        }
-        else
-            t = t->next;
-    }
-    return (t);
-}
-
-t_room  *find_name(t_room *tmp, char *n)
-{
-    t_room *t = tmp;
-
-    while (t)
-    {
-        if (!ft_strcmp(t->name,n))
-        {
-            break;
-        }
-        else
-            t = t->next;
-    }
-    return (t);
+	while (t)
+	{
+		if (t->number == n)
+			break ;
+		else
+			t = t->next;
+	}
+	return (t);
 }

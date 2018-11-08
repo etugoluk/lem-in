@@ -1,57 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reading_connects.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: etugoluk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/25 11:45:14 by etugoluk          #+#    #+#             */
+/*   Updated: 2018/05/25 11:45:14 by etugoluk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
-char		**connect_array(int numb_rooms)
+void		find_second_coord(char *line, t_room *tmp, t_coord *c)
 {
-	char 	**t;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	t = (char **)malloc(sizeof(char *) * (numb_rooms + 1));
-	t[numb_rooms] = 0;
-	while (i < numb_rooms)
-		t[i++] = ft_strnew(numb_rooms);
-	i = 0;
-	while (i < numb_rooms)
-	{
-		j = 0;
-		while (j < numb_rooms)
-			t[i][j++] = '0';
-		t[i][j] = '\0';
-		i++;
-	}
-	return (t);
-}
-
-t_coord		find_coord(char *line, t_lem_in t)
-{
-	t_coord	c;
 	int		size;
+	char	*s;
 
-	size = 0;
-	c.x = -1;
-	c.y = -1;
-	t_room *tmp;
-	char *s;
-	s = line;
-	while (*line != '-')
-	{
-		size++;
-		line++;
-	}
-	tmp = t.rooms;
-	while (tmp)
-	{
-		if (!ft_strncmp(tmp->name, s, size))
-		{
-			c.x = tmp->number;
-			break;
-		}
-		else
-			tmp = tmp->next;
-	}
-	line++;
 	size = 0;
 	s = line;
 	while (*line != '\0')
@@ -59,24 +24,50 @@ t_coord		find_coord(char *line, t_lem_in t)
 		size++;
 		line++;
 	}
-	tmp = t.rooms;
 	while (tmp)
-	{
 		if (!ft_strncmp(tmp->name, s, size))
 		{
-			c.y = tmp->number;
-			break;
+			(*c).y = tmp->number;
+			break ;
 		}
 		else
 			tmp = tmp->next;
+}
+
+t_coord		find_coord(char *line, t_lem_in t)
+{
+	t_coord	c;
+	int		size;
+	t_room	*tmp;
+
+	size = 0;
+	c.x = -1;
+	c.y = -1;
+	tmp = t.rooms;
+	while (*line != '-')
+	{
+		size++;
+		line++;
 	}
+	while (tmp)
+		if (!ft_strncmp(tmp->name, line - size, size))
+		{
+			c.x = tmp->number;
+			break ;
+		}
+		else
+			tmp = tmp->next;
+	find_second_coord(line + 1, t.rooms, &c);
 	return (c);
 }
 
-char	**symmetry(char **s)
+char		**symmetry(char **s)
 {
-	int i = 0;
-	int j = 0;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
 	while (s[i])
 	{
 		j = 0;
@@ -91,36 +82,45 @@ char	**symmetry(char **s)
 	return (s);
 }
 
-int	fill_connect_array(int fd, t_lem_in *t, char *line, t_list **lst)
+int			fill_coord(char *l, t_coord *c, t_lem_in *t)
 {
-	t_coord cord;
-
-	(*lst)->next = ft_lstnew(line, ft_strlen(line));
-	*lst = (*lst)->next;
-	if (ft_strchr(line, '-'))
+	if (l[0] == '#')
 	{
-		cord = find_coord(line, *t);
-		if (cord.x == -1 || cord.y == -1)
-			return (0);
-		(*t).con[cord.x][cord.y] = '1';
+		add_lst(l, t);
+		free(l);
+		return (1);
 	}
-	else if (line[0] != '#')
+	*c = find_coord(l, *t);
+	if ((*c).x == -1 || (*c).y == -1 ||
+		(*t).con[(*c).x][(*c).y] == '1' || (*c).x == (*c).y ||
+		(*t).con[(*c).y][(*c).x] == '1')
 		return (0);
-	while (get_next_line(fd, &line) == 1 && (ft_strchr(line, '-') || line[0] == '#'))
+	add_lst(l, t);
+	(*t).con[(*c).x][(*c).y] = '1';
+	free(l);
+	return (1);
+}
+
+int			fill_arr(t_lem_in *t, char *l)
+{
+	t_coord	c;
+
+	add_lst(l, t);
+	if (ft_strchr(l, '-'))
 	{
-		if (line[0] == '#')
-		{
-			free(line);
-			continue;
-		}
-		(*lst)->next = ft_lstnew(line, ft_strlen(line));
-		*lst = (*lst)->next;
-		cord = find_coord(line, *t);
-		if (cord.x == -1 || cord.y == -1)
-			return (0);
-		(*t).con[cord.x][cord.y] = '1';
-		free(line);
+		c = find_coord(l, *t);
+		if ((*t).con[c.x][c.y] == '1' || c.x == c.y)
+			return (1);
+		(*t).con[c.x][c.y] = '1';
 	}
+	else if (l[0] != '#')
+		return (0);
+	while (get_next_line(0, &l) == 1)
+		if (!ft_strlen(l) || !fill_coord(l, &c, t))
+		{
+			free(l);
+			break ;
+		}
 	(*t).con = symmetry((*t).con);
 	return (1);
 }

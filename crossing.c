@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   crossing.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: etugoluk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/25 11:44:36 by etugoluk          #+#    #+#             */
+/*   Updated: 2018/05/25 11:44:37 by etugoluk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
-#include <stdio.h>
 
-int ft_length(t_connect *con)
+int				ft_length(t_con *con)
 {
-	int i = 0;
+	int			i;
 
+	i = 0;
 	while (con)
 	{
 		i++;
@@ -13,67 +25,83 @@ int ft_length(t_connect *con)
 	return (i);
 }
 
-char *find_room(t_lem_in    t, t_ant *ant)
+t_room			*find_name(t_room *t, char *n)
 {
-	t_connect_arr *arr_tmp = t.arr;
-	t_connect *tmp_con;
-	int check = t.numb_rooms;
-
-	while (arr_tmp)
+	while (t)
 	{
-		tmp_con = arr_tmp->s;
+		if (!ft_strcmp(t->name, n))
+			break ;
+		else
+			t = t->next;
+	}
+	return (t);
+}
+
+char			*find_room(t_lem_in t, t_ant *ant, int check)
+{
+	t_con		*tmp_con;
+
+	while (t.arr)
+	{
+		tmp_con = (t.arr)->s;
 		while (tmp_con)
 		{
 			if ((find_number_room(tmp_con->r, t.rooms) == ant->room))
 			{
-				if ((tmp_con->next) && (find_name(t.rooms, tmp_con->next->r)->num_ants == 0 || 
+				if ((tmp_con->next) &&
+					(find_name(t.rooms, tmp_con->next->r)->num_ants == 0 ||
 					find_name(t.rooms, tmp_con->next->r)->finish == 1))
-					return (ft_length(tmp_con->next) > check + 1 ? 
+					return (ft_length(tmp_con->next) > check + 1 ?
 						find_name_room(ant->room, t.rooms) : tmp_con->next->r);
-				else if ((tmp_con->next) && (find_name(t.rooms, tmp_con->next->r)->num_ants))
+				else if ((tmp_con->next) &&
+					(find_name(t.rooms, tmp_con->next->r)->num_ants))
 					check = ft_length(tmp_con->next);
 				else
-				break;
+					break ;
 			}
 			tmp_con = tmp_con->next;
 		}
-		arr_tmp = arr_tmp->next;
+		t.arr = (t.arr)->next;
 	}
 	return (find_name_room(ant->room, t.rooms));
 }
 
-void cross(t_lem_in l)
+void			find_cross(t_ant *t_a, t_lem_in l, int k, char *t_r)
 {
-	char *tmp_room;
-	int k = 0;
+	while (t_a)
+	{
+		if (t_a->room == fnroom(l))
+		{
+			t_a = t_a->next;
+			continue;
+		}
+		t_r = find_room(l, t_a, l.numb_rooms);
+		find_name(l.rooms, find_name_room(t_a->room, l.rooms))->num_ants--;
+		if (ft_strcmp(t_r, find_name_room(t_a->room, l.rooms)))
+		{
+			if (k == 1)
+				ft_printf(" ");
+			ft_printf("L%d-%s", t_a->number, t_r);
+			k = 1;
+		}
+		t_a->room = find_number_room(t_r, l.rooms);
+		find_name(l.rooms, find_name_room(t_a->room, l.rooms))->num_ants++;
+		t_a = t_a->next;
+	}
+}
 
-	t_ant *tmp_ant = l.ants;
-	t_room *r = find_number(l.rooms, find_finish_num_room(l));
+void			cross(t_lem_in l)
+{
+	char		*tmp_room;
+	t_ant		*tmp_ant;
+	t_room		*r;
+
+	tmp_room = NULL;
+	r = find_number(l.rooms, fnroom(l));
 	while (r->num_ants != l.sum_ants)
 	{
-		k = 0;
-		while (tmp_ant)
-		{
-			if (tmp_ant->room == find_finish_num_room(l))
-			{
-				tmp_ant = tmp_ant->next;
-				continue;
-			}
-			tmp_room = find_room(l, tmp_ant);
-			find_name(l.rooms, find_name_room(tmp_ant->room, l.rooms))->num_ants--;
-			if (ft_strcmp(tmp_room,find_name_room(tmp_ant->room, l.rooms)))
-			{
-				if (k == 1)
-					printf(" ");
-				printf("L%d-%s", tmp_ant->number, tmp_room);
-				k = 1;
-			}
-			else k = 0;
-			tmp_ant->room = find_number_room(tmp_room, l.rooms);
-			find_name(l.rooms, find_name_room(tmp_ant->room, l.rooms))->num_ants++;
-			tmp_ant = tmp_ant->next;
-		}
-		printf("\n");
 		tmp_ant = l.ants;
+		find_cross(tmp_ant, l, 0, tmp_room);
+		ft_printf("\n");
 	}
 }

@@ -1,10 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   clearing.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: etugoluk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/25 11:44:26 by etugoluk          #+#    #+#             */
+/*   Updated: 2018/05/25 11:44:27 by etugoluk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
-void	free_arr(char **arr)
+void				free_arr(char **arr)
 {
-	int			i;
+	int				i;
 
 	i = 0;
+	if (!arr)
+		return ;
 	while (arr[i])
 	{
 		ft_strdel(&arr[i]);
@@ -13,9 +27,10 @@ void	free_arr(char **arr)
 	free(arr);
 }
 
-void	free_rooms(t_room *r)
+void				free_rooms(t_room *r)
 {
-	t_room *tmp = r;
+	t_room			*tmp;
+
 	while (r)
 	{
 		tmp = r;
@@ -25,9 +40,10 @@ void	free_rooms(t_room *r)
 	}
 }
 
-void	free_connect(t_connect *c)
+void				free_connect(t_con *c)
 {
-	t_connect *tmp = c;
+	t_con			*tmp;
+
 	while (c)
 	{
 		tmp = c;
@@ -37,21 +53,10 @@ void	free_connect(t_connect *c)
 	}
 }
 
-void	free_lst(t_list *c)
+void				free_arr_connect(t_con_arr *c)
 {
-	t_list *tmp = c;
-	while (c)
-	{
-		tmp = c;
-		c = c->next;
-		free_connect(tmp->content);
-		free(tmp);
-	}	
-}
+	t_con_arr		*tmp;
 
-void	free_arr_connect(t_connect_arr *c)
-{
-	t_connect_arr *tmp = c;
 	while (c)
 	{
 		tmp = c;
@@ -61,9 +66,10 @@ void	free_arr_connect(t_connect_arr *c)
 	}
 }
 
-void	free_ants(t_ant *c)
+void				free_ants(t_ant *c)
 {
-	t_ant *tmp = c;
+	t_ant			*tmp;
+
 	while (c)
 	{
 		tmp = c;
